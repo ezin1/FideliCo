@@ -167,6 +167,10 @@ body {
   margin-top: 65px;
   margin-left: 15px;
 }
+.meus-cards-title {
+  margin-top: 25px;
+  margin-left: 15px;
+}
 
 .card-container {
   display: flex;
@@ -177,6 +181,7 @@ body {
   border-radius: 20px;
   -webkit-overflow-scrolling: touch;
   margin-left: 15px;
+  height: 120px;
 }
 
 .card {
@@ -207,6 +212,30 @@ body {
   display: none;
 }
 
+.card-container-vertical {
+  width: 100%;
+  max-width: 100%;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-overflow-scrolling: touch;
+  margin-left: 15px;
+  height: 550px;
+}
+
+.card-vertical {
+  width: 80%;
+  height: 120px;
+  background-color: #eee;
+  margin-right: 10px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.card-container-vertical::-webkit-scrollbar {
+  display: none;
+}
 .footer-home{
   background: linear-gradient(to right, #FF3131,#FF914D);
   position: fixed;
