@@ -14,6 +14,6 @@ submitBtn.addEventListener('click', function(event) {
     alert('Por favor, preencha todos os campos!');
   } else {
     // Redirecione o usuário para a página home.html
-    window.location.href = 'home.html';
+    window.location.href = '/html/home.html';
   }
 });

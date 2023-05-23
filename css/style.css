@@ -233,9 +233,27 @@ body {
   background-position: center;
   position: relative;
 }
+
+.card-vertical h2 {
+  padding-top: 9px;
+  padding-left: 15px;
+}
+
 .card-container-vertical::-webkit-scrollbar {
   display: none;
 }
+
+.progress-bar {
+  height: 20px;
+  background: linear-gradient(to right, #FF914D,#FF3131);
+  border-style: solid;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #FF914D,#FF3131) 1;
+  border-radius: 10px;
+  margin: 0 25px;
+}
+
+
 .footer-home{
   background: linear-gradient(to right, #FF3131,#FF914D);
   position: fixed;
