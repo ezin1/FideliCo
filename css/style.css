@@ -10,9 +10,25 @@ html, body {
     font-family: "DM Sans", sans-serif;   
   }
 
-.FideliCo {
-  color: white;
-}
+  .qrcode-button{
+    text-decoration: none;
+  }
+
+  .FideliCo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 45%;
+    left: 50%;
+  }
+  .FideliCo img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
 
 .container {
     max-width: 960px;
@@ -28,6 +44,29 @@ h1 {
 }
 
 .formlogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.form-forgot-password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.formregister {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,9 +99,46 @@ input {
   width: 100%; 
 }
 
+#submit-recup {
+    background: linear-gradient(to right, #FF3131,#FF914D);
+    color: white;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; 
+}
+
+#submitCard,
+#submitRegister {
+  background: linear-gradient(to right, #FF3131, #FF914D);
+  color: white;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  font-size: 23px;
+}
+
+#submitCard {
+  top: 50%;
+}
+
+#submitRegister {
+  top: 100%;
+  width: 190px;
+}
+
 .forgot-password {
   display: block;
-  margin-top: 80px;
+  margin-top: 90px;
   text-decoration: none;
   color: white;
 }
@@ -73,7 +149,6 @@ input {
   color: white;
   font-weight: bold;
 }
-
 footer {
   width: 100%;
   text-align: center;
@@ -85,6 +160,11 @@ footer {
 }
 footer > * {
   margin-right: 10px;
+}
+.title-cadastro {
+  margin-top: 120px;
+  color: white;
+  font-weight: bold;
 }
 
 /* pagina principal */
@@ -114,57 +194,25 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  height: fit-content;
   background: linear-gradient(to right,  #00A5AD,#005CD6);
   color: #fff;
   text-align: left;
   padding: 10px 0;
   margin: 0;
   padding-left: 30px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5); /* Adiciona um sombreado */
+
 }
 
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
 
-.hamburger span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: black;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.hamburger span:first-child {
-  transform-origin: top left;
-}
-
-.hamburger span:last-child {
-  transform-origin: bottom left;
-}
-
-.hamburger.active span:first-child {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:last-child {
-  transform: rotate(-45deg) translate(5px, -5px);
+.FideliCo-principal img {
+  width: 200px;
+  height: auto;
 }
 
 .estabelecimentos-title {
-  margin-top: 65px;
+  margin-top: 110px;
   margin-left: 15px;
 }
 .meus-cards-title {
@@ -196,6 +244,12 @@ body {
   position: relative;
 }
 
+.card img {
+  width: 100%; /* Garante que a imagem preencha todo o espaço disponível */
+  height: 100%; /* Garante que a imagem preencha todo o espaço disponível */
+  object-fit: cover; /* Redimensiona a imagem para preencher o contêiner mantendo a proporção */
+}
+
 .card-title {
   position: absolute;
   bottom: -20px;
@@ -224,6 +278,7 @@ body {
 }
 
 .card-vertical {
+  /* Remova a propriedade 'position: relative;' */
   width: 80%;
   height: 120px;
   background-color: #eee;
@@ -231,36 +286,64 @@ body {
   flex-shrink: 0;
   background-size: cover;
   background-position: center;
-  position: relative;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Adiciona um sombreado */
+  border-radius: 10px;
 }
 
 .card-vertical h2 {
-  padding-top: 9px;
-  padding-left: 15px;
+  /* Remova as propriedades 'padding-top' e 'padding-left' */
+  margin: 0;
+  margin-bottom: 10px;
 }
 
+.card-vertical > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 9px 15px;
+}
+
+.space-last {
+  margin-top: 150px;
+}
+
+.space-last-horizontal {
+  margin-right: 30px;
+}
 .card-container-vertical::-webkit-scrollbar {
   display: none;
 }
 
 .progress-bar {
-  height: 20px;
-  background: linear-gradient(to right, #FF914D,#FF3131);
-  border-style: solid;
+  height: 5px;
   border-width: 3px;
-  border-image: linear-gradient(to right, #FF914D,#FF3131) 1;
+  border-image: linear-gradient(to right, #FF914D, #FF3131) 1;
   border-radius: 10px;
   margin: 0 25px;
+  background-color: #ddd;
+  position: relative;
 }
 
+.progress-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(to right, #FF914D, #FF3131);
+  border-radius: 10px;
+}
 
 .footer-home{
-  background: linear-gradient(to right, #FF3131,#FF914D);
+  background: linear-gradient(to right,#FF914D,#FF3131);
   position: fixed;
   bottom: 0;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
+ 
 }
 
 button {
@@ -283,4 +366,391 @@ button {
   align-items:center ;
   box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: large;
+}
+
+.generate-code-button {
+  background: linear-gradient(to right,  #00A5AD,#005CD6);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.close-button {
+  background: linear-gradient(to right,#FF914D,#FF3131);
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.div-received-code > * {
+  margin: 10px;
+}
+
+#codeDisplay {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #00A5AD, #005CD6) 1;
+  font-size: large;
+}
+
+#codeDisplay.copied {
+  background-color: #08FA8A; /* Altere a cor de fundo para verde */
+  color: #ffffff; /* Altere a cor do texto para branco */
+  border-style:none;
+}
+
+/* PROFILE CSS */
+
+.background-profile-page {
+  background-color: #E1EFFA;
+  max-width: 100%;
+  height: 100vh; /* Ocupa toda a altura da janela do navegador */
+  margin: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+.profile-picture {
+  width: 200px; /* Defina a largura desejada */
+  height: 200px; /* Defina a altura desejada */
+  border-radius: 50%; /* Define o raio para tornar a borda circular */
+  overflow: hidden; /* Esconde qualquer conteúdo que exceda a borda */
+  position: absolute; /* Posiciona o elemento de forma absoluta */
+  top: 25%; /* Define a posição vertical para o centro */
+  left: 50%; /* Define a posição horizontal para o centro */
+  transform: translate(-50%, -50%); /* Translada o elemento para o centro da página */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Adiciona um sombreado */
+}
+
+.profile-picture img {
+  width: 100%; /* Garante que a imagem preencha todo o espaço disponível */
+  height: 100%; /* Garante que a imagem preencha todo o espaço disponível */
+  object-fit: cover; /* Redimensiona a imagem para preencher o contêiner mantendo a proporção */
+}
+
+.box-name {
+  width: 70%;
+  height: 70px; 
+  display: flex;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(0, 140, 255);
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.box-cellphone {
+  width: 70%;
+  height: 70px; 
+  display: flex;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(0, 140, 255);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.box-email {
+  width: 70%;
+  height: 70px; 
+  display: flex;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(0, 140, 255);
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); 
+}
+
+
+.button-edit-profile {
+  width: 70%;
+  height: 70px;
+  display: flex;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(0, 140, 255);
+  background: linear-gradient(to right, #00A5AD, #005CD6);
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.button-edit-profile:hover {
+  background-color: #ffffff; /* Altere a cor de fundo quando o botão for hover */
+  color: white; /* Altere a cor do texto quando o botão for hover */
+}
+
+.button-edit-profile .material-icons {
+  margin-left: 25px; /* Adicione um espaçamento entre o ícone e o texto */
+  
+}
+
+.button-edit-profile i {
+  font-size: 35px; /* Defina o tamanho do ícone */
+}
+
+.button-logout {  
+  width: 40%;
+  height: 70px;
+  display: flex;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right,#FF914D,#FF3131);
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.button-logout i {
+  font-size: 35px; /* Defina o tamanho do ícone */
+}
+
+.button-logout .material-icons {
+  margin-left: 25px; /* Adicione um espaçamento entre o ícone e o texto */ 
+}
+
+.message-box .edit-name {
+  /* Estilos para o botão de editar nome */
+  background: #005CD6;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-box .edit-name:hover {
+  /* Estilos para o hover do botão de editar nome */
+  opacity: 0.8;
+}
+
+.message-box .edit-cellphone {
+  /* Estilos para o botão de editar telefone */
+  background: #005CD6;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-box .edit-cellphone:hover {
+  /* Estilos para o hover do botão de editar telefone */
+  opacity: 0.8;
+}
+
+.message-box .edit-email {
+  /* Estilos para o botão de editar email */
+  background: #005CD6;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-box .edit-email:hover {
+  /* Estilos para o hover do botão de editar email */
+  opacity: 0.8;
+}
+
+.message-box .edit-password {
+  /* Estilos para o botão de editar senha */
+  background:  #005CD6;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-box .edit-password:hover {
+  /* Estilos para o hover do botão de editar senha */
+  opacity: 0.8;
+}
+
+.buttons-message-box-edit {
+  /* Estilos para o container dos botões */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-message-box-edit button {
+  /* Estilos para os botões */
+  background: linear-gradient(to right, #00A5AD, #005CD6);
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: calc(50% - 10px); /* Dividir em duas colunas com 10px de espaço entre */
+}
+
+.buttons-message-box-edit button:hover {
+  /* Estilos para o hover dos botões */
+  opacity: 0.8;
+}
+
+.buttons-message-box-edit {
+  /* Estilos para o container dos botões */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-box {
+  position: relative;
+}
+
+.close-button-edit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.close-button-edit i {
+  color: #FF3131;
+  font-size: 35px;
+}
+
+.close-button-edit-2 {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+
+.close-button-edit:hover i {
+  opacity: 0.8;
+}
+
+.button-save {
+  background-color: #4CAF50; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  border: none; /* Sem borda */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+/* PAGE ADD CARD */
+
+
+.form-add-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#input-company-name,
+#input-company-cnpj,
+#input-validation-code {
+  border:#005CD6 solid 2px;
+  width: 300px; /* Ajuste o tamanho conforme necessário */
+  height: 40px; /* Ajuste o tamanho conforme necessário */
+  font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+  padding: 8px; /* Ajuste o preenchimento conforme necessário */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#submitCard {
+  background: linear-gradient(to right,#FF914D, #FF3131);
+  color: white;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px; /* Ajuste o tamanho conforme necessário */
+  height: 50px; /* Ajuste o tamanho conforme necessário */
+  font-size: 23px; /* Ajuste o tamanho da fonte conforme necessário */
+  padding: 8px; /* Ajuste o preenchimento conforme necessário */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.title-add-card {
+  width: 300px;
+  height: 100px;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  display: flex;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: #005CD6 solid 1px ;
+  background-color: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
 

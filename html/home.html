@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,12 +14,9 @@
 </head>
 <body class="page-principal">
     <div class="principal-title">
-        <h1 class="FideliCo-principal">FideliCo</h1>
-        <button class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+      <div class="FideliCo-principal">
+        <img src="../img/image.png" alt="Imagem">
+      </div>
     </div>
     <div>
       <h4 class="estabelecimentos-title">Estabelecimentos</h4>
@@ -49,38 +46,73 @@
       <div class="card" style="background-image: url('../img/starbucks.png')">
         <div class="card-title">Título do Card</div>
       </div>
+      <div class="space-last-horizontal"></div>
     </div>
     <div>
       <h4 class="meus-cards-title">Meus cards</h4>
     </div>
     <div class="card-container-vertical">
       <div class="card-vertical">
-        <h2>Card 1</h2>
-        <div class="progress-bar" data-value="75"></div>
+        <div>
+          <h2>Card 1</h2>
+          <h2>10/10</h2>
+        </div>
+        <div class="progress-bar"></div>
+        <div class="button-container">
+        </div>
       </div>
       
       <div class="card-vertical">
-        <h2>Card 2</h2>
-        <div class="progress-bar" data-value="50"></div>
+        <div>
+          <h2>Card 2</h2>
+          <h2>10/10</h2>
+        </div>
+        <div class="progress-bar"></div>
+        <div class="button-container"></div>
       </div>
       
       <div class="card-vertical">
-        <h2>Card 3</h2>
-        <div class="progress-bar" data-value="80"></div>
+        <div>
+          <h2>Card 3</h2>
+          <h2>10/10</h2>
+        </div>
+        <div class="progress-bar"></div>
+        <div class="button-container"></div>
       </div>
 
       <div class="card-vertical">
-        <h2>Card 4</h2>
+        <div>
+          <h2>Card 4</h2>
+          <h2>10/10</h2>
+        </div>
         <div class="progress-bar"></div>
+        <div class="button-container"></div>
       </div>
       <div class="card-vertical">
-        <h2>Card 5</h2>
+        <div>
+          <h2>Card 5</h2>
+          <h2>10/10</h2>
+        </div>
         <div class="progress-bar"></div>
+        <div class="button-container"></div>
       </div>
       <div class="card-vertical">
-        <h2>Card 6</h2>
+        <div>
+          <h2>Card 6</h2>
+          <h2>10/10</h2>
+        </div>
         <div class="progress-bar"></div>
+        <div class="button-container"></div>
       </div>
+      <div class="card-vertical">
+        <div>
+          <h2>Card 7</h2>
+          <h2>10/10</h2>
+        </div>
+        <div class="progress-bar"></div>
+        <div class="button-container"></div>
+      </div>
+      <div class="space-last"></div>
 
     </div>
     <footer class="footer-home"> 
@@ -90,18 +122,24 @@
       <button>
         <i class="material-icons">local_grocery_store</i>
       </button>
-      <button class="qr-code-icon">
-        <i class="material-icons">
-          qr_code_scanner
-          </i>
-      </button>
-      <button>
-        <i class="material-icons">add_card</i>
-      </button>
-      <button>
-        <i class="fas fa-user" style="color: #ffffff;"></i> 
-      </button>
+        <button class="qr-code-icon">
+          <i class="material-icons">
+            qr_code_scanner
+            </i>
+        </button>
+      <a href="add-card.html">
+        <button>
+          <i class="material-icons">add_card</i>
+        </button>
+      </a>
+      <a href="perfil.html">
+        <button>
+          <i class="fas fa-user" style="color: #ffffff;"></i> 
+        </button>
+      </a>
     </footer>
-    <script src="../js/script.js"></script>
+    <script src="../js/cards.js"></script>
+    <script src="../lib/qr-scanner-master/qr-scanner.min.js"></script>
+    <script src="../js/validate-qrcode.js"></script>
 </body>
 </html>     
