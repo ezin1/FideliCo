@@ -5,8 +5,7 @@ html, body {
 }
 
 .page-login {
-    background: linear-gradient(to right,  #00A5AD,#005CD6);
-    /* Define o fundo degradê lateral com os tons de azul #00A5AD */
+    background: linear-gradient(to right,  #00C2FF,#1254FF);
     font-family: "DM Sans", sans-serif;   
   }
 
@@ -195,7 +194,7 @@ body {
   left: 0;
   width: 100%;
   height: fit-content;
-  background: linear-gradient(to right,  #00A5AD,#005CD6);
+  background: linear-gradient(to right,  #00C2FF,#1254FF);
   color: #fff;
   text-align: left;
   padding: 10px 0;
@@ -366,6 +365,7 @@ button {
   align-items:center ;
   box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -387,7 +387,7 @@ button {
 }
 
 .generate-code-button {
-  background: linear-gradient(to right,  #00A5AD,#005CD6);
+  background: linear-gradient(to right,  #00C2FF,#1254FF);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -416,7 +416,7 @@ button {
   padding-top: 5px;
   padding-bottom: 10px;
   border-style: solid;
-  border-image: linear-gradient(to right, #00A5AD, #005CD6) 1;
+  border-image: linear-gradient(to right,  #00C2FF,#1254FF) 1;
   font-size: large;
 }
 
@@ -464,7 +464,7 @@ button {
   border-radius: 7px;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(0, 140, 255);
+  border: 1px solid #1254FF;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -480,7 +480,7 @@ button {
   border-radius: 7px;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(0, 140, 255);
+  border: 1px solid #1254FF;
   position: absolute;
   top: 55%;
   left: 50%;
@@ -496,7 +496,7 @@ button {
   border-radius: 7px;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(0, 140, 255);
+  border: 1px solid #1254FF;
   position: absolute;
   top: 65%;
   left: 50%;
@@ -513,8 +513,8 @@ button {
   border-radius: 7px;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(0, 140, 255);
-  background: linear-gradient(to right, #00A5AD, #005CD6);
+  border: 1px solid #1254FF;
+  background: linear-gradient(to right,  #00C2FF,#1254FF);;
   position: absolute;
   top: 80%;
   left: 50%;
@@ -565,7 +565,7 @@ button {
 
 .message-box .edit-name {
   /* Estilos para o botão de editar nome */
-  background: #005CD6;
+  background: #1254FF;
   color: white;
   padding: 10px 20px;
   margin: 5px;
@@ -581,7 +581,7 @@ button {
 
 .message-box .edit-cellphone {
   /* Estilos para o botão de editar telefone */
-  background: #005CD6;
+  background: #1254FF;
   color: white;
   padding: 10px 20px;
   margin: 5px;
@@ -597,7 +597,7 @@ button {
 
 .message-box .edit-email {
   /* Estilos para o botão de editar email */
-  background: #005CD6;
+  background: #1254FF;
   color: white;
   padding: 10px 20px;
   margin: 5px;
@@ -613,7 +613,7 @@ button {
 
 .message-box .edit-password {
   /* Estilos para o botão de editar senha */
-  background:  #005CD6;
+  background:  #1254FF;
   color: white;
   padding: 10px 20px;
   margin: 5px;
@@ -637,7 +637,7 @@ button {
 
 .buttons-message-box-edit button {
   /* Estilos para os botões */
-  background: linear-gradient(to right, #00A5AD, #005CD6);
+  background: linear-gradient(to right,  #00C2FF,#1254FF);
   color: white;
   padding: 10px 20px;
   margin: 5px;
@@ -709,7 +709,7 @@ button {
 #input-company-name,
 #input-company-cnpj,
 #input-validation-code {
-  border:#005CD6 solid 2px;
+  border:#1254FF solid 2px;
   width: 300px; /* Ajuste o tamanho conforme necessário */
   height: 40px; /* Ajuste o tamanho conforme necessário */
   font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
@@ -745,7 +745,7 @@ button {
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: #005CD6 solid 1px ;
+  border: #1254FF solid 1px ;
   background-color: white;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
